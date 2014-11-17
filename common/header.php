@@ -10,6 +10,7 @@ and open the template in the editor.
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script src="js/jquery-2.1.1.min.js"></script>
         <title>Homework App</title>
     </head>
     <body>
@@ -30,14 +31,25 @@ and open the template in the editor.
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">   
                         <ul class="nav navbar-nav navbar-right">
-                            <!--IF LOGGED OUT-->
-                            <button type="button" class="btn navbar-btn btn-primary">Log In</button>
-                            <button type="button" class="btn navbar-btn btn-primary">Register</button>
-                            <!--IF LOGGED IN-->
-                            <button type="button" class="btn navbar-btn btn-primary">Log Out</button>
+                            
+                            <?php
+                            //<!--IF LOGGED OUT-->
+                                if($isLogin){
+                                    echo "<form role = \"form\" action = \"login.php\">";
+                                    echo"<a class=\"btn navbar-btn btn-primary\" href = \"login.php\">Log In</a>";
+                                    echo"<a class=\"btn navbar-btn btn-primary\">Register</a>";
+                                    echo "</form>";
+                                } else {
+                            //<!--IF LOGGED IN-->
+                                    echo "<button type=\"button\" class=\"btn navbar-btn btn-primary\">Log Out</button>";
+                                }
+                            ?>
+                            
+                            
+                            
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
-        </div>
+       
  

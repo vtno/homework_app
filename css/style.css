@@ -7,9 +7,9 @@ and open the template in the editor.
     Created on : 17 พ.ย. 2557, 13:15:37
     Author     : Tino noob_shit
 */
-.option_pane{
-    position:absolute;
-    bottom:0;
-    right: 0;
+.add-bar-wrap{
+    display: inline;
 }
-
+.inline {
+    display:inline;
+}
