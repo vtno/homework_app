@@ -1,7 +1,8 @@
 <?php
-include_once 'common/headerLogin.php';
-include_once 'connectServer.php';
 session_start();
+include_once 'common/headerLoginPage.php';
+include_once 'connectServer.php';
+
 if ($_POST['login']) {
     //must check id and password
     $username = $_POST['username'];

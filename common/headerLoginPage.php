@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php session_start();?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -27,12 +26,9 @@
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse "  id="bs-example-navbar-collapse-1">
-                        
-                        <ul class="nav navbar-nav navbar-right col-lg-6 pull-right">
+
+                        <ul class="nav navbar-nav navbar-right col-lg-3 pull-right">
                             <a class="btn navbar-btn btn-primary pull-right" href = "logout.php">Log Out</a>
-                            <li class="pull-right"><h4 class="navbar-text"><small>Log in as: </small><?php echo $_SESSION['username']; ?></h4></li>
-                            
-                            
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->

@@ -10,7 +10,7 @@ include_once 'connectServer.php';
     <form role="form" method = "POST" action="regisConfirm.php">
         <div class="form-group">
             <label for="inputUsername">Username</label>
-            <input type="test" class="form-control"  placeholder="Enter username.." name = "username">
+            <input type="text" class="form-control"  placeholder="Enter username.." name = "username">
         </div>
         <div class="form-group">
             <label for="inputPassword1">Password</label>

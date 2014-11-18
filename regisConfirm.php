@@ -13,8 +13,10 @@ $addFacebook = "INSERT INTO facebook(accountName,user_username)VALUE('".$faceboo
 $addPhone = "INSERT INTO phone_number(phone_number,user_username)VALUE('".$phone_number."','".$username."')";
 
 if($cn->query($addUser)&&$cn->query($addEmail)&&$cn->query($addFacebook)&&$cn->query($addPhone)){
-  echo "SUCCESS";   
+  echo "<h1>DONE!<small> Your profile have been created.</small></h1>";
+  echo "<a href =\"login.php\" class =\"btn btn-default\">Log in</a>";
 } else {
-    echo "FAIL";
+    echo "<h1>Oops!<small> Something went wrong. Please try again.</small></h1>";
+    echo "<a href =\"register.php\" class =\"btn btn-default\">Try again</a>";
 }
 ?>

@@ -1,6 +1,5 @@
 <?php
 include_once 'connectServer.php';
-session_start();
 ?>
 <h1>Tasks</h1>
 <table class="table table-hover">
@@ -9,22 +8,22 @@ session_start();
 </thead>
 <!--FETCH FROM DATABASE-->
 <?php
-$taskQuery = "SELECT * FROM user U, task T,course C WHERE U.username = '".$_SESSION['username']."'"
-        . "AND C.courseID = T.courseID";
-$result = mysqli_query($cn, $taskQuery);
-
-while ($row = mysqli_fetch_array($result)) {
-    echo "<tr id = \"tr".$count."\"><td>$count</td>";
-    echo "<td>{$row['taskName']}</td>";
-    echo "<td>{$row['courseName']}</td>";
-    echo "<td>{$row['deadline']}</td>";
-    echo "<td>{$row['status']}</td></tr>";
-    $count+=1;
+$taskQuery = "SELECT * FROM user U INNER JOIN task T INNER JOIN course C WHERE U.username = '" . $_SESSION['username'] . "'"
+        . "AND U.username = T.username";
+if ($result = mysqli_query($cn, $taskQuery)) {
+    while ($row = mysqli_fetch_array($result)) {
+        echo "<tr id = \"tr" . $count . "\"><td>$count</td>";
+        echo "<td>{$row['taskName']}</td>";
+        echo "<td>{$row['courseName']}</td>";
+        echo "<td>{$row['deadline']}</td>";
+        echo "<td>{$row['status']}</td></tr>";
+        $count+=1;
+    }
 }
 ?>
 
 </table>
-<?php include_once 'addBar.php';?>
+<?php include_once 'addBar.php'; ?>
 <h1>Course Taken</h1>
 <table class="table table-hover">
     <thead>
@@ -32,17 +31,19 @@ while ($row = mysqli_fetch_array($result)) {
 </thead>
 <!--FETCH FROM DATABASE-->
 <?php
-$courseQuery = "SELECT * FROM user U, course C WHERE U.username = '".$_SESSION['username']."'";
-$result = mysqli_query($cn, $courseQuery);
+$courseQuery = "SELECT * FROM user U, course C, course_has_user CU WHERE U.username = '" . $_SESSION['username'] . "' "
+        . "AND U.username = CU.username AND C.courseID = CU.courseID";
+if ($result = mysqli_query($cn, $courseQuery)) {
+    while ($row = mysqli_fetch_array($result)) {
+        echo "<tr id = \"tr" . $count2 . "\"><td>$count2</td>";
+        echo "<td>{$row['courseName']}</td>";
+        echo "<td>{$row['courseID']}</td></tr>";
 
-while ($row = mysqli_fetch_array($result)) {
-    echo "<tr id = \"tr".$count."\"><td>$count</td>";
-    echo "<td>{$row['courseName']}</td>";
-    echo "<td>{$row['courseID']}</td>";
-  
-    $count+=1;
+        $count2+=1;
+    }
 }
 mysqli_close($cn);
 ?>
 </table>
-<?php include_once 'addCourseBar.php';?>
+<?php include_once 'addCourseBar.php'; ?>
+    

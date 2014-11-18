@@ -1,5 +1,6 @@
 <?php
-    include_once 'common/header.php';
+    session_start();
+    include_once 'common/headerLogin.php';
 ?>
 <form role ="form"action ="deleteConfirm.php " method = "POST">
     <label>Delete Task Name</label>
