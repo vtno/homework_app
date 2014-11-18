@@ -1,20 +1,14 @@
 <?php
-$isLogin = True;
 //header
 include_once 'common/header.php';
 $page_title = "Home";
+?>
 
+<div class="col-lg-12">
+    <h1>YOU ARE NOT LOGGED IN.<small> Please log in or register. :)</small></h1>
+</div>
 
-//IF LOGGED IN
-if(!$isLogin){
-include_once 'showList.php';
-include_once 'addBar.php';
-}
-//IF LOGGED OUT
-else {
-    echo "<h1>PLEASE LOG IN OR REGISTER :)</h1>";
-}
+<?php
 //footer
-
 include_once 'common/footer.php';
 ?>

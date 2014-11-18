@@ -27,19 +27,11 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">   
                         <ul class="nav navbar-nav navbar-right">
-                            
-                            <?php                                  
-                                    echo"<a class=\"btn navbar-btn btn-primary\" href = \"login.php\">Log In</a>";
-                                    echo"&nbsp;&nbsp;";
-                                    echo"<a class=\"btn navbar-btn btn-primary\" href = \"register.php\">Register</a>";                       
-                               
-                            ?>
-                            
+                        <a class="btn navbar-btn btn-primary" href = "index.php">Log Out</a>
+                       
                             
                             
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
-       
- 

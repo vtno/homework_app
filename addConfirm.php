@@ -17,7 +17,7 @@ if ($result) {
       <input class =\"btn btn-default\" type= \"submit\" value =\"Back to list\">
       </form>";
     } else {
-        echo "<h1>Oops!<small>&nbsp;Something went wrong.&nbsp;&nbsp;Please check your information.<br><br>";
+        echo "<h1>Oops!<small>&nbsp;Your course does not exist in database.&nbsp;&nbsp;Please register new course.<br><br>";
         echo "<a class = \"btn btn-danger\" href = \"index.php\">Cancel</a>";
     }
     mysqli_close($cn);
