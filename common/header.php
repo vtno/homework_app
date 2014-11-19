@@ -21,7 +21,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">HOMEWORK APP</a>
+                        <a class="navbar-brand" href="login.php">HOMEWORK APP</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->

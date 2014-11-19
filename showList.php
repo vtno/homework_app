@@ -8,8 +8,8 @@ include_once 'connectServer.php';
 </thead>
 <!--FETCH FROM DATABASE-->
 <?php
-$taskQuery = "SELECT * FROM user U INNER JOIN task T INNER JOIN course C WHERE U.username = '" . $_SESSION['username'] . "'"
-        . "AND U.username = T.username";
+$taskQuery = "SELECT * FROM  task T,course C WHERE T.username = '" . $_SESSION['username'] . "'"
+        . "AND C.courseID = T.courseID";
 if ($result = mysqli_query($cn, $taskQuery)) {
     while ($row = mysqli_fetch_array($result)) {
         echo "<tr id = \"tr" . $count . "\"><td>$count</td>";
@@ -31,8 +31,8 @@ if ($result = mysqli_query($cn, $taskQuery)) {
 </thead>
 <!--FETCH FROM DATABASE-->
 <?php
-$courseQuery = "SELECT * FROM user U, course C, course_has_user CU WHERE U.username = '" . $_SESSION['username'] . "' "
-        . "AND U.username = CU.username AND C.courseID = CU.courseID";
+$courseQuery = "SELECT * FROM course C, course_has_user CU WHERE CU.username = '" . $_SESSION['username'] . "' "
+        . "AND C.courseID = CU.courseID";
 if ($result = mysqli_query($cn, $courseQuery)) {
     while ($row = mysqli_fetch_array($result)) {
         echo "<tr id = \"tr" . $count2 . "\"><td>$count2</td>";
@@ -42,7 +42,6 @@ if ($result = mysqli_query($cn, $courseQuery)) {
         $count2+=1;
     }
 }
-mysqli_close($cn);
 ?>
 </table>
 <?php include_once 'addCourseBar.php'; ?>

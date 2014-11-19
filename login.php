@@ -5,7 +5,7 @@ include_once 'common/header.php';
 <h2 class ="center">Homework Application</h2><br><br>
 <div class ="col-lg-4"></div>
 <div class ="col-lg-4">
-    
+
     <form role ="form" method ="POST" action ="postLogin.php" class="form-horizontal">
         <div class="form-group">
             <div class="col-lg-3">
@@ -23,7 +23,10 @@ include_once 'common/header.php';
                 <input type ="password" name ="password" class ="form-control" placeholder="password...">
             </div>
         </div>
-        <input type="submit" name ="login" value="Log in" class ="pull-right btn btn-info btn-lg">
+        <div class="form-group pull-right">
+            <input type="submit" name ="login" value="Log in" class ="btn btn-info btn-lg">
+            <a  href="register.php"class ="btn btn-info btn-lg">Register</a>
+        </div>
     </form>
 
 </div>

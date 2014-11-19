@@ -9,6 +9,14 @@ include_once 'connectServer.php';
 <div class ="col-lg-4">
     <form role="form" method = "POST" action="regisConfirm.php">
         <div class="form-group">
+            <label for="inputUsername">Name</label>
+            <input type="text" class="form-control"  placeholder="Enter name.." name = "name">
+        </div>
+        <div class="form-group">
+            <label for="inputUsername">Surname</label>
+            <input type="text" class="form-control"  placeholder="Enter surname.." name = "surname">
+        </div>
+        <div class="form-group">
             <label for="inputUsername">Username</label>
             <input type="text" class="form-control"  placeholder="Enter username.." name = "username">
         </div>
