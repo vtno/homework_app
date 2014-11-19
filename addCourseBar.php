@@ -10,7 +10,7 @@
         }
         ?>
 
-        <a class = "btn btn-danger btn-lg" href = "deleteCourse.php">Unregistere Course</a>
+        <a class = "btn btn-danger btn-lg" href = "deleteCourse.php">Unregister Course</a>
     </form>
 </div>
 
