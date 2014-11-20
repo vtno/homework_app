@@ -30,7 +30,7 @@
                         
                         <ul class="nav navbar-nav navbar-right col-lg-6 pull-right">
                             <a class="btn navbar-btn btn-primary pull-right" href = "logout.php">Log Out</a>
-                            <li class="pull-right"><h4 class="navbar-text"><small>Log in as: </small><?php echo $_SESSION['username']; ?></h4></li>
+                            <li class="pull-right"><h4 class="navbar-text"><small>Log in as: </small><a href = "userProfile.php"><?php echo $_SESSION['username']; ?></a></h4></li>
                             
                             
                         </ul>

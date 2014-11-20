@@ -4,7 +4,7 @@ include_once 'connectServer.php';
 <h1>Tasks</h1>
 <table class="table table-hover">
     <thead>
-    <td>#</td><td>Task</td><td>Course</td><td>Deadline</td><td>Status</td>
+    <td>#</td><td>Task</td><td>Course Name</td><td>Course ID</td><td>Deadline</td><td>Status</td>
 </thead>
 <!--FETCH FROM DATABASE-->
 <?php
@@ -15,6 +15,7 @@ if ($result = mysqli_query($cn, $taskQuery)) {
         echo "<tr id = \"tr" . $count . "\"><td>$count</td>";
         echo "<td>{$row['taskName']}</td>";
         echo "<td>{$row['courseName']}</td>";
+        echo "<td>{$row['courseID']}</td>";
         echo "<td>{$row['deadline']}</td>";
         echo "<td>{$row['status']}</td></tr>";
         $count+=1;

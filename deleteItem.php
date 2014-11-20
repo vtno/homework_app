@@ -21,15 +21,15 @@ include_once 'connectServer.php';
             </select>
         </div>
         <div class="form-group">
-            <label for="inputTask">Course Name</label>
-            <select class="form-control" name ="courseName">
+            <label for="inputTask">Course ID - Course Name</label>
+            <select class="form-control" name ="courseID">
                 <?php
                 //get courses from DB
                 $query = "SELECT * FROM course C, course_has_user CU WHERE CU.username = '" . $_SESSION['username'] . "' "
                         . "AND C.courseID = CU.courseID";
                 $result = $cn->query($query);
                 while ($row = mysqli_fetch_array($result)) {
-                    echo "<option>" . $row['courseName'] . "</option>";
+                    echo "<option>".$row['courseID']. "-". $row['courseName'] . "</option>";
                 }
                 mysqli_close($cn);
                 ?>
