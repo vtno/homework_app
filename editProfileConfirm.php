@@ -127,7 +127,6 @@ if ($othermailArray['COUNT(other_email)'] > 0) {
 } else {
     //insert
     if ($othermail != "") {
-        echo "enter if";
         $insert = "INSERT INTO user_email(other_email, username) VALUES ('$othermail','$username') ON DUPLICATE KEY UPDATE other_email ='$othermail'";
         $cn->query($insert);
         echo "<h3>OTHER MAIL updated</h3><br>";
