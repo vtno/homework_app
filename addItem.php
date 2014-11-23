@@ -41,7 +41,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputTask">Deadline(YYYY/MM/DD)</label>
-                    <input type ="text" class="form-control" name ="deadline" placeholder="deadline...">
+                    <input type ="date" class="form-control" name ="deadline" placeholder="deadline...">
                 </div>
                 <div class="form-group">
                     <label for="inputTask">Status</label>
