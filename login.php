@@ -3,8 +3,8 @@ include_once 'common/header.php';
 ?>
 <br><br><br><br><br>
 <h2 class ="center">Homework Application</h2><br><br>
-<div class ="col-lg-4"></div>
-<div class ="col-lg-4">
+<div class ="col-lg-3"></div>
+<div class ="col-lg-6">
 
     <form role ="form" method ="POST" action ="postLogin.php" class="form-horizontal">
         <div class="form-group">
@@ -30,5 +30,5 @@ include_once 'common/header.php';
     </form>
 
 </div>
-<div class ="col-lg-4"></div>
+<div class ="col-lg-3"></div>
 

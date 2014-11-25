@@ -11,7 +11,8 @@ $courseID = substr($courseID_name, 0, $end);
 $coursename = substr($courseID_name, $end);
 
 //query
-$query = "DELETE FROM task WHERE courseID = '" . $courseID . "' AND task.username = '" . $username . "';";
+echo $courseID;
+$query = "DELETE FROM task WHERE courseID = '$courseID' AND task.username = '$username';";
 $query.="DELETE FROM course_has_user WHERE course_has_user.courseID = '$courseID' AND username = '$username';";
 
 //check if the task and the course is sync with the db or not

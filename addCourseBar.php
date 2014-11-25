@@ -6,12 +6,11 @@
         $result = $cn->query($query);
         $count = mysqli_fetch_assoc($result);
         if ($count['COUNT(courseID)'] > 0) {
-            echo"<input type =\"submit\" class = \"btn btn-warning btn-lg\" value=\"Course Info\">";
+        echo"<input type =\"submit\" class = \"btn btn-warning btn-lg\" value=\"Course Info\">";
         }
         ?>
-
+        <a class = "btn btn-success btn-lg" href = "enrollCourse.php">enroll Course</a>
         <a class = "btn btn-danger btn-lg" href = "deleteCourse.php">Unregister Course</a>
+        
     </form>
 </div>
-
-

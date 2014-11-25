@@ -50,6 +50,9 @@ while ($row = mysqli_fetch_array($result)) {
     while ($usernameInfo = mysqli_fetch_array($usernameResult)) {
         $userInfo = mysqli_fetch_array($nameResult);
         $username = $usernameInfo['username'];
+        if(is_null($username)){
+            $username="kuykuykuykyukyukyu";
+        }
         $name = $userInfo['name'];
         $surname = $userInfo['surname'];
         $gmail = $userInfo['gmail_email'];

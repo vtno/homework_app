@@ -5,6 +5,7 @@
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet" type="text/css">
+                  <link href="fonts/font.css" rel="stylesheet" type="text/css">
         <script src="js/jquery-2.1.1.min.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>
         <title>Homework App</title>

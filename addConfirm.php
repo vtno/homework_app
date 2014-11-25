@@ -9,11 +9,20 @@ $username = $_SESSION['username'];
 $taskname = $_POST['taskName'];
 $deadline = $_POST['deadline'];
 $status = $_POST['status'];
-
+if(empty($taskname)||empty($courseID)||empty($deadline)){
+    if(empty($taskname)){
+ echo '<script type="text/javascript">alert("Please input task name.");window.history.go(-1);</script>';
+}
+ if(empty($courseID)){
+    echo '<script type="text/javascript">alert("Please register course first.");window.history.go(-1);</script>';
+ }
+ if(empty($deadline)){
+    echo '<script type="text/javascript">alert("Please select the date.");window.history.go(-1);</script>';
+ }
+}else{
 //check if task is already added [name,courseID,deadline]
 $checkTask = "SELECT taskName FROM task WHERE task.taskname = '$taskname' AND task.username = '$username' AND "
         . "task.courseID = '" . $courseID['courseID'] . "' AND task.deadline = '$deadline'";
-
 $checkResult = $cn->query($checkTask);
 if ($checkResult->num_rows > 0) {
     echo "<h1>Oops!<small>&nbsp;This task is already in the list.<br><br>";
@@ -31,6 +40,7 @@ if ($checkResult->num_rows > 0) {
         echo "<h1>Oops!<small>&nbsp;Your course does not exist in database.<br><br>";
         echo "<a class = \"btn btn-danger\" href = \"main.php\">Cancel</a>";
     }
+}
 }
 ?>
 
