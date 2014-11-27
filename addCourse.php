@@ -29,11 +29,11 @@
                 </div>
                        <div class="form-group">
                     <label for="inputTask">Professor email</label>
-                    <input type ="text" class="form-control" name ="professorEmail" placeholder="Prof. sur...">
+                    <input type ="email" class="form-control" name ="professorEmail" placeholder="Prof. sur...">
                 </div>
                        <div class="form-group">
                     <label for="inputTask">other Professor email</label>
-                    <input type ="text" class="form-control" name ="professorOtherEmail" placeholder="Prof. sur...">
+                    <input type ="email" class="form-control" name ="professorOtherEmail" placeholder="Prof. sur...">
                 </div>
                 <div class="form-group">
                     <input type ="submit" class="btn btn-success" value ="Register course!">

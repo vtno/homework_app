@@ -8,9 +8,7 @@ $status = $_POST['status'];
 $username = $_SESSION['username'];
 $taskname = $_POST['taskName'];
 $query = "UPDATE task SET status='$status' WHERE task.username='$username' AND task.taskID='$taskname'";
-      echo$status;
-      echo$username;
-      echo$status;
+     
      if ($cn->query($query)) {
     echo"<div class = \"col-lg-12\">
          <h2>Task status has been updated</h2>

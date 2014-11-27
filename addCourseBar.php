@@ -10,7 +10,7 @@
         }
         ?>
         <a class = "btn btn-success btn-lg" href = "enrollCourse.php">enroll Course</a>
-        <a class = "btn btn-danger btn-lg" href = "deleteCourse.php">Unregister Course</a>
+        <a class = "btn btn-danger btn-lg" href = "deleteCourse.php">Withdraw Course</a>
         
     </form>
 </div>
